@@ -1,5 +1,4 @@
-# AirFlow Tutorial
-## Tại sao phải là Airflow:
+# Tại sao phải là Airflow:
 - Bạn có cần schedule các tác vụ của mình chạy trên server?
 - Bạn sử dụng crontab?
 - Bạn làm sao để xử lý khi nó bị lỗi
@@ -11,6 +10,7 @@
   - Vậy khi bạn muốn chạy song song các job đồng thời thì bạn xử lý như thế nào?
   
   Airflow sinh ra để xử lý tất cả các vấn đề trên. Bạn có thể chạy liên tục các job, đồng thời các job, cảnh báo nếu có lỗi hoặc cảnh báo thành công và nhiều hơn như thế nữa. 
+# Một số  Operator cơ bản trong Airflow
 
 ## Python Operator 
 ```
