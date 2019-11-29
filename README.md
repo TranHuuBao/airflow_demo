@@ -1,4 +1,17 @@
 # AirFlow Tutorial
+## Tại sao phải là Airflow:
+- Bạn có cần schedule các tác vụ của mình chạy trên server?
+- Bạn sử dụng crontab?
+- Bạn làm sao để xử lý khi nó bị lỗi
+  - Bạn outlog ra file rồi check file log
+  - Bạn sử dụng healthcheck.io để alert
+  - Vậy bạn làm sao để chạy lại các tác vụ đã lỗi nhanh chóng nhất
+ - Bạn có thường chạy nhiều job  liên tục với nhau không?
+   - Bạn làm sao để chạy được như vậy?
+  - Vậy khi bạn muốn chạy song song các job đồng thời thì bạn xử lý như thế nào?
+  
+  Airflow sinh ra để xử lý tất cả các vấn đề trên. Bạn có thể chạy liên tục các job, đồng thời các job, cảnh báo nếu có lỗi hoặc cảnh báo thành công và nhiều hơn như thế nữa. 
+
 ## Python Operator 
 ```
 import airflow
@@ -182,13 +195,20 @@ spark_job = SparkSubmitOperator(
 
 spark_job >> notify 
 ```
-
 ## Tutorial
-### Spark Operator 
-Mỗi khi bạn submit job Spark, bạn cần kiểm tra xem input của mình đã tồn tại hay chưa hoặc output của mình đã tồn tại hay chưa. Điều đó gây mất khá nhiều thời gian. Bằng Airflow và các operator đã giới thiệu , bạn hãy viết một dags có thể tối ưu hóa công việc của mình trong quá trình này. 
-Với các job này sẽ submit mỗi ngày một lần vào 4h thứ 4 hàng tuần . 
-Lưu ý: Mỗi người cần tạo một dag_id  riêng  biệt để tránh trùng lặp 
+### Exercise 1: Python Operator with parameter 
 
-### Python Operator with parameter 
+Bạn hãy tạo 1 dags PythonOperator chạy một  function in ra các từng giá trị trong list ['one', 'two', 'three','four', 'five'] bằng cách truyền vào args từ PythonOperator 
+- Lưu ý: Mỗi người cần tạo một dag_id  riêng  biệt để tránh trùng lặp với format [mail_prefix]_your_dag_name
+- Các dag sau khi tạo xong copy lên server 118.68.168.182 với
+``` 
+	account: member1 
+	password: 1234567
+```
+vào đường dẫn /home/member1/airflow-dags/ 
+Bạn có thể tạo folder riêng cho mình trong đó để dễ quản lý hơn.
 
-Bạn hãy tạo 1 dags PythonOperator chạy một  function in ra các từng giá trị trong list ['one', 'two', 'three','four', 'five'] bằng cách truyền vào parameter 
+### Exercise 2:  Spark Operator 
+- Mỗi khi bạn submit job Spark, bạn cần kiểm tra xem input của mình đã tồn tại hay chưa hoặc output của mình đã tồn tại hay chưa. Điều đó gây mất khá nhiều thời gian và công sức.
+-  Bằng Airflow và các operator đã giới thiệu , bạn hãy viết một dags có thể tối ưu hóa công việc của mình trong quá trình này. 
+Với các job này sẽ submit mỗi ngày một lần vào 4h thứ 4 hàng tuần .
