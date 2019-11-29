@@ -191,4 +191,4 @@ Lưu ý: Mỗi người cần tạo một dag_id  riêng  biệt để tránh tr
 
 ### Python Operator with parameter 
 
-Bạn hãy tạo 1 dags PythonOperator chạy một  function  in ra các gtừng  giá trị trong list ['one', 'two', 'three','four', 'five'] bằng cách truyền vào parameter 
+Bạn hãy tạo 1 dags PythonOperator chạy một  function in ra các từng giá trị trong list ['one', 'two', 'three','four', 'five'] bằng cách truyền vào parameter 
