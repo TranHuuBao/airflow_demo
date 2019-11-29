@@ -3,7 +3,7 @@
 - Bạn sử dụng crontab?
 - Bạn làm sao để xử lý khi nó bị lỗi
   - Bạn outlog ra file rồi check file log
-  - Bạn sử dụng healthcheck.io để alert
+  - Bạn sử dụng healthchecks.io để alert
   - Vậy bạn làm sao để chạy lại các tác vụ đã lỗi nhanh chóng nhất
  - Bạn có thường chạy nhiều job  liên tục với nhau không?
    - Bạn làm sao để chạy được như vậy?
