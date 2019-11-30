@@ -209,6 +209,6 @@ vào đường dẫn /home/member1/airflow-dags/
 Bạn có thể tạo folder riêng cho mình trong đó để dễ quản lý hơn.
 
 ### Exercise 2:  Spark Operator 
-- Mỗi khi bạn submit job Spark, bạn cần kiểm tra xem input của mình đã tồn tại hay chưa hoặc output của mình đã tồn tại hay chưa. Điều đó gây mất khá nhiều thời gian và công sức.
+- Mỗi khi bạn submit job Spark mapreduce word count, bạn cần kiểm tra xem input của mình đã tồn tại hay chưa hoặc output của mình đã tồn tại hay chưa. Điều đó gây mất khá nhiều thời gian và công sức. Làm sao để giảm bớt công sức ở công đoạn này?
 -  Bằng Airflow và các operator đã giới thiệu , bạn hãy viết một dags có thể tối ưu hóa công việc của mình trong quá trình này. 
-Với các job này sẽ submit mỗi ngày một lần vào 4h thứ 4 hàng tuần .
+Với các job này sẽ submit mỗi ngày một lần vào 4h0p thứ 4 hàng tuần .
