@@ -10,6 +10,17 @@
   - Vậy khi bạn muốn chạy song song các job đồng thời thì bạn xử lý như thế nào?
   
   Airflow sinh ra để xử lý tất cả các vấn đề trên. Bạn có thể chạy liên tục các job, đồng thời các job, cảnh báo nếu có lỗi hoặc cảnh báo thành công và nhiều hơn như thế nữa. 
+# Set up enviroment 
+- Install Python 3
+	``` 
+	sudo apt-get update
+	sudo apt-get install python3
+	```
+- Install package airflow
+  ```
+  pip install apache-airflow
+  ```
+  
 # Một số  Operator cơ bản trong Airflow
 
 ## Python Operator 
